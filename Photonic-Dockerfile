@@ -4,7 +4,7 @@ LABEL authors="Merlyn Jaqueline Juarez Gutierrez <merlynj@icf.unam.mx>, Wolf Lui
 #RUN instruction with shell commands as arguments
 RUN apt update; \
     apt -y upgrade; \
-    apt-get -y install \
+    apt -y install \
     aptitude \
     less \
     cmake \
@@ -12,18 +12,9 @@ RUN apt update; \
     freeglut3-dev \ 
     gfortran \
     gnuplot-qt \
-    make \ 
-    netpbm \
-    openssh-server \
-    tmux \
-    sharutils \	
-    xterm \
-    patch \
-    zip \
-    csh \
     liblapack-dev \
     libcfitsio-dev \
-    libfribidi-dev 
+    libfribidi-dev \ 
     libgd-dev \
     libgif-dev \
     libgsl-dev \
@@ -44,14 +35,16 @@ RUN apt update; \
     libopengl-image-perl \
     libopengl-perl \
     libfftw3-dev \
+    make \ 
+    netpbm \
+    openssh-server \
+    tmux \
+    sharutils \	
+    xterm \
+    patch \
+    zip \
+    csh \
     wget \
-#Intall perl, to no to use system's perl
-RUN wget -O - https://install.perlbrew.pl |bash \
-    && echo source ~/perl5/perlbrew/etc/bashrc >> ~/.bashrc \
-    && bash \
-    && perlbrew install_cpanm \
-    && perlbrew install perl-5.30.3 \
-    switch perl-5.30.3 \
 #Install some PDL DEPENDENCIES
 RUN cpanm \
     Devel::CheckLib \
@@ -75,8 +68,6 @@ RUN cpanm \
     Term::ReadLine::Gnu \
     Data::Dump::Streamer \
     Sys::SigAction \
-    OpenGL \ #FAILED
-    PGPLOT \ #FAILED
     File::Map \
     Term::ReadKey \
     Archive::Extract \
