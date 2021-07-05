@@ -3,9 +3,9 @@ Dockerfile to build docker PDL image and container using Debian-testing OS.
 
 ## Use
 
-You may build a docker image with the command
+You may build a PDL docker image with the command
 
-    $ docker build -t pdlimage https://github.com/wlmb/PDL-Dockerfile.git
+    $ docker build -t photonicmage https://github.com/merlynjj/Photonic-Dockerfile.git
 
 (replace pdlimage for whatever name you choose for your image).
 
