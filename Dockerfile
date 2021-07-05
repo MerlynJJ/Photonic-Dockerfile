@@ -1,4 +1,4 @@
-#Get image base debian
+#get image base debian
 FROM debian:testing
 LABEL authors="Merlyn Jaqueline Juarez Gutierrez <merlynj@icf.unam.mx>, Wolf Luis Mochán Backal <mochan@icf.unam.mx>"
 #RUN instruction with shell commands as arguments
@@ -44,7 +44,7 @@ RUN apt update; \
     patch \
     zip \
     csh \
-    wget \
+    wget; 
 #Install some PDL DEPENDENCIES
 RUN cpanm \
     Devel::CheckLib \
@@ -75,7 +75,7 @@ RUN cpanm \
     Shell:Guess \
     Alien::FFTW3 \
     Alien::HDF4 \
-    Alien::Proj4 \
+    Alien::Proj4; \
 #Install PDL and some firends
     cpanm \
     PDL \
@@ -83,9 +83,9 @@ RUN cpanm \
     PDL::LinearAlgebra \
     PDL::IO::GD \
     PDL::IO::CSV \
-    PDL::IO::DBI \
+    PDL::IO::DBI; \
 RUN cpanm -n \
-    PDL::Graphics::Gnuplot
+    PDL::Graphics::Gnuplot;
 #Photonic, a single shell command
 RUN cpanm Photonic
 CMD export DISPLAY=:0; bash
