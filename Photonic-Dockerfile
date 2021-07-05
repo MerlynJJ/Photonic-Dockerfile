@@ -1,5 +1,5 @@
 #Get image base debian
-FROM debian
+FROM debian:testing
 LABEL authors="Merlyn Jaqueline Juarez Gutierrez <merlynj@icf.unam.mx>, Wolf Luis Mochán Backal <mochan@icf.unam.mx>"
 #RUN instruction with shell commands as arguments
 RUN apt update; \
