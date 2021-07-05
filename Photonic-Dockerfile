@@ -2,8 +2,9 @@
 FROM debian
 LABEL authors="Merlyn Jaqueline Juarez Gutierrez <merlynj@icf.unam.mx>, Wolf Luis Mochán Backal <mochan@icf.unam.mx>"
 #RUN instruction with shell commands as arguments
-RUN apt update && apt upgrade \
-    && apt-get install -y \
+RUN apt update; \
+    apt -y upgrade; \
+    apt-get -y install \
     aptitude \
     less \
     cmake \
